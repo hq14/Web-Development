@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: hsl(214, 47%, 23%);
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.info {
+  margin: 5rem auto;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 2px solid white;
+  width: 45rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  color: white;
+}
+.title h1 {
+  line-height: 1;
+}
+
+.score {
+  width: 8rem;
+  height: 6rem;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.score h1 {
+  color: hsl(229, 25%, 31%);
+  font-weight: 700;
+  font-size: 4rem;
+}
+.score h4 {
+  color: hsl(229, 64%, 46%);
+  position: relative;
+  top: 10px;
+  letter-spacing: 2px;
+}
+
+.rps {
+  width: 20rem;
+  height: 20rem;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.bg-triangle {
+  position: relative;
+  top: 5rem;
+  z-index: -1;
+}
+
+.circle {
+  height:150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 15px solid;
+}
+.circle:hover{
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+}
+
+.paper {
+  left: -3rem;
+  border-color: hsl(230, 89%, 62%);
+}
+
+.scissors {
+  right: -3rem;
+  border-color: hsl(40, 84%, 53%);
+}
+
+.rock {
+  bottom: -7rem;
+  border-color:  hsl(349, 70%, 56%);
+}
+
+.rules {
+  padding: 1rem 2rem;
+  position: absolute;
+  top: 52rem;
+  right: 2rem;
+  font-size: 2rem;
+  border: 2px solid white;
+  border-radius: 10px;
+  color: white;
+  background: none;
+}
+.rules:hover {
+  background: white;
+  color: black;
+}
+
+.rules-window {
+  padding: 2rem;
+  position: absolute;
+  left: 50%;
+  top: 33rem;
+  transform: translate(-50%, -50%);
+  width: 30rem;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
+
+.rules-window-top {
+  width: 90%;
+  display: flex;
+  justify-content:space-between;
+
+}
+
+.rules-heading {
+  font-size: 2rem;
+  color: hsl(229, 25%, 31%)
+}
+.rules-close {
+  width: 5%;
+  height: 5%;
+  margin-top: 0.7rem;
+}
+.rules-image {
+  margin-top: 3rem;
+  width: 80%;
+}
+
+.choices {
+  position: absolute;
+  left: 50%;
+  top: 33rem;
+  transform: translate(-50%, -50%);
+  background-color: hsl(214, 47%, 23%);
+  height: 30rem;
+  width: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.choices h2 {
+  text-align: center;
+  margin-bottom: 5rem;
+  color: white;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.choice {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-width: 2rem;
+  border-style: solid;
+}
+
+.outcome {
+  width: 25%;
+  position: absolute;
+  top: 50rem;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.play-again {
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  border: 2px solid white;
+  border-radius: 10px;
+  color: white;
+  background: none;
+}
+
+.play-again:hover {
+  background: white;
+  color: black;
+}
+
+.result {
+  font-size: 3rem;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+@media only screen and (max-width: 748px) {
+  .info {
+    width: 90%;
+  }
+
+  .rules {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .rps {
+    width: 305px;
+  }
+  .bg-triangle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .paper, .scissors {
+    top: -2rem;
+  }
+  .rock {
+    bottom: -2rem;
+  }
+
+  .rules {
+    position: absolute;
+    top: auto;
+    bottom: 1rem;
+  }
+  .rules-window {
+    top: 31rem;
+  }
+
+  .choices {
+    width: 90%;
+    top: 31rem;
+  }
+  .choice {
+    height: 150px;
+    width: 150px;
+    border-width: 1rem;
+  }
+  .choices-left, .choices-right {
+    width: 271px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .outcome {
+    width: 50%;
+    top: 45rem;
+  }
+
+  .choices h2, .play-again, .rules {
+    font-size: 100%;
+  }
+}

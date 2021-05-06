@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  <link rel="stylesheet" href="css/master.css">
+</head>
+
+<body>
+
+  <div class="info">
+    <div class="title">
+      <h1>ROCK</h1>
+      <h1>PAPER</h1>
+      <h1>SCOSSORS</h1>
+    </div>
+    <div class="score">
+      <h4>SCORE</h4>
+      <h1>0</h1>
+    </div>
+  </div>
+  <div class="rps">
+    <img class="bg-triangle" src="images/bg-triangle.svg" alt="">
+    <div class="circle paper">
+      <img src="images/icon-paper.svg" alt="">
+    </div>
+    <div class="circle rock">
+      <img src="images/icon-rock.svg" alt="">
+    </div>
+    <div class="circle scissors">
+      <img src="images/icon-scissors.svg" alt="">
+    </div>
+  </div>
+  <button class='rules' type="button" name="button">RULES</button>
+  <div class="rules-window hidden">
+    <div class="rules-window-top">
+      <span class="rules-heading">RULES</span>
+      <img class="rules-close" src="images/icon-close.svg" alt="">
+    </div>
+    <img class="rules-image" src="images/image-rules.svg" alt="">
+  </div>
+  <div class="choices hidden">
+    <div class="choices-left">
+      <h2>YOU PICKED</h2>
+      <div class="choice player">
+        <img src="images/icon-lizard.svg" alt="">
+      </div>
+    </div>
+    <div class="choices-right">
+      <h2>COMPUTER PICKED</h2>
+      <div class="choice computer">
+        <img src="images/icon-spock.svg" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="outcome">
+    <h1 class="result hidden"></h1>
+    <button class='play-again hidden' type="button" name="button">PLAY AGAIN</button>
+  </div>
+
+  <script src="app.js" charset="utf-8"></script>
+</body>
+
+</html>
